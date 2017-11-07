@@ -1,0 +1,21 @@
+---
+- name: add user
+  hosts: windows
+  gather_facts: false
+  tasks:
+    - name: add group for windows server 2012 r2
+      win_group:
+        name: hogefuga
+        description: Deploy Group
+        state: present
+
+    - name: add user for windorws server 2012 r2
+      win_user:
+        name: bob
+        state: present
+        password: "1Qazxsw2"
+        groups:
+          - Domain Users
+          - Administrators
+          - hogefuga
+

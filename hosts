@@ -1,0 +1,9 @@
+[windows]
+192.168.8.107
+
+[windows:vars]
+ansible_user=Administrator
+ansible_password=1Qazxsw2
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
